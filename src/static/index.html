@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Printer</title>
+    <style type="text/css">
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background: #38ADD1;
+            background: linear-gradient(
+                140deg,
+                #38ADD1 0%,
+                #61759C 100%
+            ); 
+
+            color: #FFF;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            background: #FFF;
+            border-radius: 5px;
+            color: #000;
+            padding: 20px;
+            min-height: 300px;
+            text-align: justify;
+        }
+
+        .logo {
+            padding: 50px 0;
+            width: 387px;
+            max-width: 80%;
+        }
+
+        table {
+            color: #000;
+            text-align: center;
+            width: 100%;
+        }
+
+        th {
+            background-color: #BBB;
+            font-weight: 400;
+            padding: 10px 0;
+        }
+
+        table .empty {
+            padding: 100px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <img class="logo" src="./logo.png"/>
+    <div class="container">       
+        <label for="power">Power: </label><input id="power" type="checkbox" checked/>
+        <label for="ink">Has Ink: </label><input id="ink" type="checkbox" checked/>
+        <label for="paper">Has Paper: </label><input id="paper" type="checkbox" checked/>
+        <p>Status: Idle</p>
+        <table>
+            <tr>
+                <th>Job ID</th>
+                <th>Job Name</th>
+                <th>Status</th>
+                <th>Pages</th>
+                <th>Options</th>
+            </tr>
+            <tr>
+                <td class="empty" colspan="5">No Jobs</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

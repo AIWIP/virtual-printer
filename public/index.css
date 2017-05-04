@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #38ADD1;
+    background: linear-gradient(
+        140deg,
+        #38ADD1 0%,
+        #61759C 100%
+    ); 
+    color: #FFF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    background: #FFF;
+    border-radius: 5px;
+    color: #000;
+    min-height: 300px;
+    text-align: justify;
+}
+
+.toolbar {
+    box-sizing: border-box;
+    background: #C5C5C5;
+    background: linear-gradient(
+        180deg,
+        #E7E7E7,
+        #D6D6D6
+    );
+    border-radius: 5px 5px 0 0;
+    border-bottom: #ddd 1px solid;
+    padding: 10px;
+    width: 100%;
+}
+
+.toolbar .item {
+    display: inline-block;
+    font-size: 14px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.logo {
+    padding: 50px 0;
+    width: 250px;
+    max-width: 80%;
+}
+
+table {
+    border-spacing: 0;
+    color: #000;
+    margin: 0;
+    width: 100%;
+}
+
+th {
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #C5C5C5;
+    border-right: 1px solid #DDD;
+    font-size: 12px;
+    font-weight: 500;
+    text-indent: 5px;
+    padding: 5px;
+}
+
+.job {
+    font-size: 12px;
+    text-indent: 5px;
+}
+
+.job:nth-child(odd) {
+    background: #F5F5F5;
+}
+
+.job td {
+    padding: 2px 0;
+}
+
+table .empty {
+    padding: 100px 0;
+    text-align: center;
+}

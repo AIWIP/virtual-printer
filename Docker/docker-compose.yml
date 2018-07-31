@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context:  ./virtualprinter
+      dockerfile: Dockerfile
+    ports:
+      - "161:9200"
+      - "9100:9100"
+      - "5000:5000"
+
+  proxy:
+    build:
+      context:  ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    links:
+      - app

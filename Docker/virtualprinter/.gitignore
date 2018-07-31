@@ -1,0 +1,12 @@
+
+
+# NPM
+node_modules/
+assets/
+webpack-stats.json
+
+# Vagrant
+.vagrant
+
+# Printjobs
+public/printjobs

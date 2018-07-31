@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Virtual Printer</title>
+    
+    <link rel="stylesheet" href="index.css">
+
+    <script src="jquery.js"></script>
+    <script src="vue.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <img class="logo" src="./logo.png"/>
+    <div id="app" class="container">       
+        <div class="toolbar">
+            <div v-on:click="updateData" class="item"><label for="ink">Ink </label><input id="ink" type="checkbox" v-model="has_ink"/></div>
+            <div v-on:click="updateData" class="item"><label for="paper">Paper </label><input id="paper" type="checkbox" v-model="has_paper"/></div>
+        </div>
+        <table>
+            <tr>
+                <th>Job ID</th>
+                <th>Job Name</th>
+                <th>Status</th>
+            </tr>
+            <tr v-if="jobs.length == 0">
+                <td class="empty" colspan="5">No Jobs</td>
+            </tr>
+            <tr class="job" v-for="job in jobs">
+                <td>{{job.id}}</td>
+                <td><a v-bind:href="job.href">{{job.name}}</a></td>
+                <td>{{job.status}}</td>
+            </tr>
+        </table>
+    </div>
+    <script>init_app();</script>
+</body>
+</html>
